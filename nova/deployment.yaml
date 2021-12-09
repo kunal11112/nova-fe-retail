@@ -27,6 +27,8 @@ spec:
       labels:
         app: novagas
     spec:
+      strategy:
+        type: Recreate
       containers:
         - name: novagas
           imagePullPolicy: Always
