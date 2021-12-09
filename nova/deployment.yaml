@@ -33,4 +33,11 @@ spec:
           image: nginx:latest
           ports:
             - containerPort: 8080
+           volumeMounts:
+            - name: novagas
+              mountPath: /mnt
+      volumes:
+        - name: novagas
+          persistentVolumeClaim:
+            claimName: nova-fe-retail
 
