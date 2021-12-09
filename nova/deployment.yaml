@@ -30,7 +30,7 @@ spec:
       containers:
         - name: novagas
           imagePullPolicy: Always
-          image: kunal1996/fe-retail:l1
+          image: nginx:latest
           ports:
             - containerPort: 8080
 
