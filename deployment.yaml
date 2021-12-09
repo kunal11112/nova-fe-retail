@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nova-fe-retail-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: novagas
+  ports:
+    - port: 80 #service port forward traffic to targetport
+      targetPort: 80  #80 port is the port in which my application is listening inside container
+      # Optional field
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nova-fe-retail
+  labels:
+    app: novagas
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: novagas
+  template:
+    metadata:
+      labels:
+        app: novagas
+    spec:
+      containers:
+        - name: novagas
+          imagePullPolicy: Always
+          image: kunal1996/fe-retail:l1
+          ports:
+            - containerPort: 8080
+
