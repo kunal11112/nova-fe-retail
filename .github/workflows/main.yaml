@@ -46,6 +46,6 @@ jobs:
      needs: push_on_docker
      steps:
        - name: 'Status'
-         run: kubectl get all
+         run: kubectl get pods
        - name: 'Deploy'
          run: kubectl apply -f deployment.yaml
