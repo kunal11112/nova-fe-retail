@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@500&family=Roboto:wght@400;500;700&family=Great+Vibes&display=swap');
+
+
+$roboto-font: 'Roboto', sans-serif;
+$raleway-font: 'Raleway', sans-serif;
+$poppins-font: 'Poppins', sans-serif;
+$great-vibes-font: 'Great Vibes', cursive;
+
+.ff-raleway {
+  font-family: $raleway-font;
+}
+
+.ff-roboto {
+  font-family: $roboto-font;
+}
+
+.ff-poppins {
+  font-family: $poppins-font;
+}
+
+.ff-great-vibes {
+  font-family: $great-vibes-font;
+}

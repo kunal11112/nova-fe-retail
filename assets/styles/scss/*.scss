@@ -1,0 +1,5 @@
+@use 'typography';
+
+* {
+  font-family: typography.$poppins-font;
+}

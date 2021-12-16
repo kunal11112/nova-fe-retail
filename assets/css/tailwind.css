@@ -1,0 +1,7 @@
+:root {
+--color-whisper35: 229,229,229;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

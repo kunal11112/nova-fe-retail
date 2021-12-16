@@ -1,0 +1,21 @@
+$color-whisper35: rgba($color: #c4c4c4, $alpha: 0.35);
+$color-blue-gradient: linear-gradient(180deg, #264382 0%, #00263d 100%);
+$color-green-gradient: linear-gradient(180deg, #3abc59 0%, #0a7b37 100%);
+$color-grey-gradient: linear-gradient(180deg, #c4c4c4 0%, #7b7171 100%);
+$color-faded-blue-gradient: linear-gradient(180deg, #637eb9 16.15%, #0d0a1d 100%);
+$color-white-gradient: linear-gradient(180deg, #fff 0%, #c4c4c4 100%);
+.bg-blue-gradient {
+  background: $color-blue-gradient;
+}
+.bg-green-gradient {
+  background: $color-green-gradient;
+}
+.bg-grey-gradient {
+  background: $color-grey-gradient;
+}
+.bg-faded-blue-gradient {
+  background: $color-faded-blue-gradient;
+}
+.bg-white-gradient {
+  background: $color-white-gradient;
+}
