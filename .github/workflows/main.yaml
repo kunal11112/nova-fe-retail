@@ -24,7 +24,7 @@ jobs:
     steps:
         - uses: actions/checkout@v1
         - name: Build the Docker Image 
-          run: docker build --tag manalirahate/nova-gas:1.0.3 .
+          run: docker build --tag kunal1996/nova-fe:1.0.3 .
        
           env:
             CI: true
@@ -39,7 +39,7 @@ jobs:
              username: ${{ secrets.DOCKER_USERNAME }}
              password: ${{ secrets.DOCKER_PASSWORD }}
          - name: Push the Docker Image 
-           run: docker push manalirahate/nova-gas:1.0.3
+           run: docker push kunal1996/nova-fe:1.0.3
   
   push_on_rancher:
      runs-on: self-hosted
