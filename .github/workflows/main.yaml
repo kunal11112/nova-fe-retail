@@ -45,7 +45,14 @@ jobs:
      runs-on: self-hosted
      needs: push_on_docker
      steps:
-       - name: 'Status'
-         run: kubectl get pods
-       - name: 'Deploy'
-         run: kubectl apply -f deployment.yaml
+     - name: Checkout code
+       uses: actions/checkout@v2
+     - name: Create kubeconfig
+       run: |
+         echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > /root/.kube/config
+         cat /root/.kube/config
+     - name: Use context
+       run: kubectl config use-context nova-fe-retail
+     - name: Deploy to K8s
+       run: kubectl apply -f deploymant.yaml
+       
