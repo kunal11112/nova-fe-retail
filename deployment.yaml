@@ -30,7 +30,7 @@ spec:
       containers:
         - name: novagas
           imagePullPolicy: Always
-          image: kunal1996/fe-retail:l1
+          image: kunal1996/nova-fe:1.0.3
           ports:
             - containerPort: 8080
 
