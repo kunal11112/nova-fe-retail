@@ -46,9 +46,7 @@ jobs:
      needs: push_on_docker
      steps:
      - name: Checkout code
-       uses: actions/checkout@v2
-     - name: Use context
-       run: kubectl config use-context nova-fe-retail
+       uses: actions/checkout@v1
      - name: Deploy to K8s
-       run: kubectl apply -f deploymant.yaml
+       run: kubectl apply -f deployment.yaml
        
